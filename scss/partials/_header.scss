@@ -1,0 +1,57 @@
+.header {
+  background: #f7f7f7;
+  padding: 0 15px;
+
+  &__logo {
+    grid-column: 2/6;
+    justify-self: self-start;
+    align-self: center;
+    padding-left: 22px;
+
+    @include sm {
+      grid-column: 1/10;
+      padding-left: 0;
+    }
+  }
+  &__userbar {
+    display: flex;
+    grid-column: 6/9;
+    justify-content: end;
+    
+    @include sm {
+      grid-column: 1/10;
+      justify-self: flex-end;
+    }
+
+    &-btn {
+      font-weight: 500;
+      font-size: 14px;
+      border: none;
+      padding: 0 18px;
+      margin-right: 1px;
+    }
+    &-bag {
+      line-height: 69px;
+      padding-right: 40px;
+      padding-left: 20px;
+      background: #eee url(../../images/ic-bag.svg) 86% 50% no-repeat;
+      color: $baseColorRed;
+      text-decoration: none;
+
+      @media screen and (max-width: 568px){
+        line-height: 30px;
+      }
+    }
+
+    &-count {
+      color: #333;
+      padding-right: 9px;
+    }
+
+    @media screen and (max-width: 568px){
+      margin-bottom: 20px;
+    }
+  }
+
+}
+
